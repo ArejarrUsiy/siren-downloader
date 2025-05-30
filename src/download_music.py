@@ -43,7 +43,7 @@ def download_music(song):
         for data in song_file.iter_content(chunk_size=1024):
             file.write(data)
             bar.update(len(data))
-    # 下载歌词
+    # 下载歌词！
     with open(lrc_path, "wb") as file, tqdm.tqdm(
         desc=f"正在下载歌词：{song_name} [{album_name}]",
         total=lrc_file_size,
